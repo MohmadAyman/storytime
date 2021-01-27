@@ -1,9 +1,11 @@
 from transformers import AutoTokenizer, AutoModelWithLMHead
 import nltk
 
+model_path = "classifier"
+
 # Downloads and saves the models
 tokenizer = AutoTokenizer.from_pretrained("mrm8488/t5-base-finetuned-emotion", use_fast=False)
-model = AutoModelWithLMHead.from_pretrained("mrm8488/t5-base-finetuned-emotion")
+model = AutoModelWithLMHead.from_pretrained(model_path)
 
 nltk.download('punkt')
 from nltk.tokenize import sent_tokenize 
