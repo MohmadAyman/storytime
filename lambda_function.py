@@ -17,7 +17,15 @@ from ask_sdk_model import Response
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
+import json
+#import numpy as np
 
+def lambda_handler(event, context):
+    # TODO implement
+    return {
+        'statusCode': 200,
+        'body': json.dumps('Hello from Lambda!')
+    }
 
 class LaunchRequestHandler(AbstractRequestHandler):
     """Handler for Skill Launch."""
